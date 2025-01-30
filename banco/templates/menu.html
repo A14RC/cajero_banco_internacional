@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Menú de Opciones{% endblock %}
+
+{% block content %}
+<h1 class="text-center">Bienvenido/a, {{ nombre_usuario }}</h1><div class="list-group">
+<div class="list-group">
+    <a href="{% url 'consulta_saldo' %}" class="list-group-item list-group-item-action"><i class="fas fa-wallet menu-icon"></i> Consulta de Saldo</a>
+    <a href="{% url 'transferencia' %}" class="list-group-item list-group-item-action"><i class="fas fa-exchange-alt menu-icon"></i> Transferencias</a>
+    <a href="{% url 'retiro' %}" class="list-group-item list-group-item-action"><i class="fas fa-money-bill-wave menu-icon"></i> Retiros</a>
+    <a href="{% url 'pago' %}" class="list-group-item list-group-item-action"><i class="fas fa-file-invoice-dollar menu-icon"></i> Pagos de Servicios</a>
+    
+</div>
+<a href="{% url 'inicio' %}" class="btn btn-danger mt-3">Salir</a>
+{% endblock %}

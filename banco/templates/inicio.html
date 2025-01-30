@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<h1>Bienvenido al Banco Internacional</h1>
+<p>Por favor, inicia sesión o regístrate para continuar.</p>
+<a href="{% url 'inicio_sesion' %}">Iniciar Sesión</a> | <a href="{% url 'registro' %}">Registrarse</a>
+{% endblock %}
